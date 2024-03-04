@@ -7,17 +7,32 @@
 
 </head>
 <body>
-<div class="singularResponsive">
-	<iframe src="https://helldivers2stats.com/"> </iframe>
+ <div id="SingularOverlay" style="width:720px; height: 400px;">
+<script>
+	 var options = {
+  class: "iFrameClass",
+  endpoint: "http://app.singular.live",
+  interactive: true,
+  syncGraphics: false,
+  showPreloader: false,
+  aspect: "",
+};
+
+var overlay = SingularOverlay("#DomElement", options, (params) => {
+  // callback code goes here
+});
+</script>
+	 
+	<iframe class="singularPlayer" src="https://helldivers2stats.com/"> </iframe>
 	<script src="https://player.singular.live/playerMsgs.js"></script>
 </div>
  
-<!–
-<div class="singularResponsive">
+
+ <div id="SingularOverlay" style="width:720px; height: 400px;">
   <iframe class="singularPlayer" width="1280" height="720" src="https://player.singular.live?tech=youtube&id=FkfEMReEl5g&token=7uLi3k3gou4VPYcGuApfCS&synced=1&autoplay=false&transparent=true&thin=true&g_screenSize=medium" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <script src="https://player.singular.live/playerMsgs.js"></script>
 </div>
-— > 
+
 
 
 	
