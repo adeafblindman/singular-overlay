@@ -12,14 +12,16 @@
 	 var options = {
   class: "iFrameClass",
   endpoint: "http://app.singular.live",
-  interactive: true,
+  interactive: false,
   syncGraphics: false,
   showPreloader: false,
-  aspect: "",
+  aspect: "16x9",
 };
 
 var overlay = SingularOverlay("#DomElement", options, (params) => {
   // callback code goes here
+// defining composition revision URL as string
+var content = "https://app.singular.live/apiv2/controlapps/1uXr7z15z0nt2j29sgg5QW";
 });
 </script>
 	 
