@@ -2,35 +2,17 @@
 <html lang="en">
 
 <head>
-  <!-- Include the Singular Overlay JavaSrcipt library -->
+  <link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet">
   <script src="https://app.singular.live/libs/singularoverlay/1.0.0/singularoverlay.js"></script>
-
 </head>
 <body>
- <div id="SingularOverlay" style="width:720px; height: 400px;">
-<script>
-	 var options = {
-  class: "iFrameClass",
-  endpoint: "http://app.singular.live",
-  interactive: false,
-  syncGraphics: false,
-  showPreloader: false,
-  aspect: "16x9",
-};
-
-var overlay = SingularOverlay("#DomElement", options, (params) => {
-  // callback code goes here
-// defining composition revision URL as string
-var content = "https://app.singular.live/apiv2/controlapps/1uXr7z15z0nt2j29sgg5QW";
-});
-</script>
-	 
-	<iframe class="singularPlayer" src="https://helldivers2stats.com/" width="1280" height="720"> </iframe>
-	<script src="https://player.singular.live/playerMsgs.js"></script>
-</div>
- 
-
-
+  <div class="video-wrapper">
+    <video id="VideoPlayer" class="video-js" controls preload="auto" width="640" height="360" data-setup="{}">
+      <source src="https://wixmp-3cd9cad51439e55d79e6d6d6.wixmp.com/TestVideo1_4.mp4" type='video/mp4'>
+    </video>
+  </div>
+  <script src="https://vjs.zencdn.net/7.3.0/video.js"></script>
+</body>
 
 
 
