@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-
+  <link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet">
   <script src="https://app.singular.live/libs/singularoverlay/1.0.0/singularoverlay.js"></script>
 </head>
 <body>
-<body>
-  <!-- inside the div the iFrame of the overlay will be created -->
-  <div id="SingularOverlay" style="width:720px; height: 400px;"></div>
-<iframe src="https://helldivers2stats.com/" height="700" width="400" title="Helldivers2stats.com"></iframe>
-
-	
-
+  <div class="video-wrapper">
+    <video id="VideoPlayer" class="video-js" controls preload="auto" width="640" height="360" data-setup="{}" >
+      <source src="https://wixmp-3cd9cad51439e55d79e6d6d6.wixmp.com/TestVideo1_4.mp4" type='video/mp4'>
+    </video>
+  </div>
+  <script src="https://vjs.zencdn.net/7.3.0/video.js"></script>
 
 <script>
- var options = {
+var options = {
     class: 'iFrameClass',
     endpoint: 'https://app.singular.live',
     interactive: true,
     syncGraphics: false,
     showPreloader: false,
     interactive: true,
-    aspect: ''
+    aspect: '16x9',
+
   }
   var vjs = videojs('VideoPlayer');
     
@@ -34,20 +34,50 @@
     // callback code goes here
     console.log("Singular Overlay Init - Success");
   });
- 
+    
+  /*
+      // List of all HTML5 events (various uses).
+      vjs.Html5.Events = 'loadstart,suspend,abort,error,emptied,stalled,loadedmetadata,loadeddata,canplay,canplaythrough,playing,waiting,seeking,seeked,ended,durationchange,timeupdate,progress,play,pause,ratechange,volumechange'.split(',');
+  */
+  /*
+      mapping overlay SDK functions
+      videoPlaying()      // playing
+      videoPaused()     // pause
+      videoBuffering()    // waiting
+      videoStopped()  
+      videoFinished()     // ended
+      videoSeeking(time)    // seeking
+      videoSeeked()     // seeked
+      videoTime(time)     // timeupdate
+      videoMetadata(object) // loadedmetadata
+      videoMuted()    
+      videoUnmuted()
+      videoVolume(value)    // volumechange
+      videoAdStart()
+      videoAdFinished()
+      videoAdSkip()
+      videoSegment(time)
+  */
+  // define callbacks supported by video.js
+  // video is playing
+
+
+
   overlay.setContent({
-    compToken: '6lvfuMr7yFPY2NXbZ4qnZV'
+	compToken: '7jrfwULPGGTQYqxsP52a0l'
   }, (params) => {
     // called when content finished loading
     console.log("Singular Overlay Content Loaded - Success");
   });
-  overlay.addListener('message', function(params) {
-    // MESSAGE RECEIVED FROM OVERLAY SDK (GRAPHIC EVENTS):
-    console.log("OVERLAY RECEIVED MESSAGE: ", params);
 
-  });
-	</script>
-	
+
+  
+  </script>
+
+
+
+
+
 
 </body>		
 </html>
