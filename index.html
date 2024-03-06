@@ -6,13 +6,14 @@
   <script src="https://app.singular.live/libs/singularoverlay/1.0.0/singularoverlay.js"></script>
 </head>
 <body>
-  <div class="video-wrapper">
-    <video id="VideoPlayer" class="video-js" controls preload="auto" width="640" height="360" data-setup="{}">
-      <source src="https://wixmp-3cd9cad51439e55d79e6d6d6.wixmp.com/TestVideo1_4.mp4" type='video/mp4'>
-    </video>
-  </div>
-  <script src="https://vjs.zencdn.net/7.3.0/video.js"></script>
+<body>
+  <!-- inside the div the iFrame of the overlay will be created -->
+  <div id="SingularOverlay" style="width:720px; height: 400px;"></div>
+<iframe src="https://helldivers2stats.com/" height="200" width="300" title="Helldivers2stats.com"></iframe>
+
+	
 </body>
+
 
 <script>
  var options = {
@@ -48,6 +49,6 @@
   });
 	</script>
 	
-</body>
+
 		
 </html>
